@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Energy Consumption Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body { font-family: Arial, sans-serif; background:#f4f6f8; display:flex; align-items:center; justify-content:center; height:100vh; }
+      .card { background:white; padding:20px 30px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); width:360px; }
+      input { width:100%; padding:8px 10px; margin:8px 0; border:1px solid #ddd; border-radius:4px; }
+      button { width:100%; padding:10px; margin-top:10px; background:#007bff; color:white; border:none; border-radius:4px; cursor:pointer; }
+      .result { margin-top:12px; padding:10px; background:#eef9ff; border:1px solid #cde8ff; border-radius:4px; }
+      .error { margin-top:12px; padding:10px; background:#ffefef; border:1px solid #ffcdcd; border-radius:4px; }
+      label { font-size:14px; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h3>Smart Home Energy Prediction</h3>
+      <form action="/predict" method="post">
+        <label>T1 (Kitchen Temp °C)</label>
+        <input type="text" name="T1" placeholder="e.g., 20" value="{{ values.T1 if values }}">
+        <label>RH_1 (Kitchen Humidity %)</label>
+        <input type="text" name="RH_1" placeholder="e.g., 30" value="{{ values.RH_1 if values }}">
+        <label>T_out (Outdoor Temp °C)</label>
+        <input type="text" name="T_out" placeholder="e.g., 8" value="{{ values.T_out if values }}">
+        <label>Windspeed (m/s)</label>
+        <input type="text" name="Windspeed" placeholder="e.g., 3" value="{{ values.Windspeed if values }}">
+        <label>lights (Wh)</label>
+        <input type="text" name="lights" placeholder="e.g., 20" value="{{ values.lights if values }}">
+        <button type="submit">Predict</button>
+      </form>
+      {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+      {% endif %}
+      {% if error %}
+        <div class="error">Error: {{ error }}</div>
+      {% endif %}
+    </div>
+  </body>
+</html>
