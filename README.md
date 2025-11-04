@@ -18,7 +18,7 @@ The model was trained on the `energydata_complete.csv` dataset.
 
 ---
 ## Output Screenshort
-![Screenshort of the Output](Image URL)
+![Screenshort of the Output](./output.png)
 
 ---
 
