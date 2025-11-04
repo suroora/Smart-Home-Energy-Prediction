@@ -17,6 +17,10 @@ The goal of this project is to estimate the **energy usage of household applianc
 The model was trained on the `energydata_complete.csv` dataset.
 
 ---
+## Output Screenshort
+![Screenshort of the Output](Image URL)
+
+---
 
 ## 🏗️ Project Structure
 
@@ -110,7 +114,10 @@ Build Docker Image
 docker build -t energy-app
 ```
 #### Run Container
-```docker run -p 5000:5000 energy-app```
+```code
+docker run -p 5000:5000 energy-app
+```
+
 Then open: http://localhost:5000
 
 ---
