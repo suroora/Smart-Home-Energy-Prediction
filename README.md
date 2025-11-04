@@ -24,15 +24,15 @@ The model was trained on the `energydata_complete.csv` dataset.
 
 ## 🏗️ Project Structure
 
-├── app.py # Flask web app
-├── energy_model.py # Model training script
-├── energy_model.pkl # Trained Random Forest model
-├── energy_scaler.pkl # Feature scaler (StandardScaler)
-├── energydata_complete.csv # Source dataset
-├── Dockerfile # For Docker image creation
-├── requirements.txt # Dependencies list
-├── output.png # Screenshot of UI/output
-└── README.md # Project documentation
+├── app.py # Flask web app<br>
+├── energy_model.py # Model training script<br>
+├── energy_model.pkl # Trained Random Forest model<br>
+├── energy_scaler.pkl # Feature scaler (StandardScaler)<br>
+├── energydata_complete.csv # Source dataset<br>
+├── Dockerfile # For Docker image creation<br>
+├── requirements.txt # Dependencies list<br>
+├── output.png # Screenshot of UI/output<br>
+└── README.md # Project documentation<br>
 
 
 ---
